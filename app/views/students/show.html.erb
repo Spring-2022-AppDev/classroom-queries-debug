@@ -1,7 +1,7 @@
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <h1>
-      Student  details
+      Student <%=@the_student.id%> details
     </h1>
 
     <div class="row mb-3">
@@ -38,7 +38,7 @@
         Number of courses
       </dt>
       <dd>
-        <%= Enrollment.where({ :student_id => @the_student.id }).first.student %>
+        <%= Enrollment.where({ :student_id => @the_student }).count %>
       </dd>
     </dl>
   </div>
